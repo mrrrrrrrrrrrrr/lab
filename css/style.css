@@ -22,3 +22,76 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+a {
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+li {
+    list-style-type: none; 
+}
+
+
+.header__navigation {
+    display: flex;
+    background-color: rgba(237, 237, 237, 0.72);
+    width: 1440px;
+    height: 89px;
+    left: 0px;
+    top: 0px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    padding-left:96px;
+    padding-right: 532px;
+    justify-content: center;
+}
+
+.logo__element1 {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #4C5C6B;
+    padding-bottom: 7px;
+}
+.logo__element2 {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #AFAFAF;
+}
+
+
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    padding-right: 96px;
+}
+.menu {
+
+}
+.menu__item {
+    padding-left: 40px;
+    
+}
+.menu__link {
+    width: 116px;
+    height: 30px;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+}
