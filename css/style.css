@@ -18,6 +18,8 @@
     font-display: swap;
 }
 
+
+
 img {
     max-width: 100%;
     height: auto;
@@ -35,12 +37,21 @@ li {
     list-style-type: none; 
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    max-width: 100%;
+}
+
+.row {
+    width: 1469px;
+    height: auto;
+}
 
 .header__navigation {
     display: flex;
     background-color: rgba(237, 237, 237, 0.72);
-    width: 1440px;
-    height: 89px;
     left: 0px;
     top: 0px;
 }
@@ -94,4 +105,8 @@ li {
     font-size: 15px;
     line-height: 30px;
     color: #000000;
+}
+
+.menu__item:first-child {
+    padding-left: 0px;
 }
