@@ -27,6 +27,7 @@ img {
 
 a {
     text-decoration: none;
+    
 }
 
 figure {
@@ -89,16 +90,12 @@ li {
     align-items: center;
     padding-right: 96px;
 }
-.menu {
 
-}
 .menu__item {
     padding-left: 40px;
     
 }
 .menu__link {
-    width: 116px;
-    height: 30px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
@@ -110,3 +107,143 @@ li {
 .menu__item:first-child {
     padding-left: 0px;
 }
+
+.row {
+    display: flex;
+}
+
+.header__left {
+    position: relative;
+    height: 855px;
+    width: 626px;
+}
+
+.left__title {
+    padding-left: 103px;
+    padding-top: 525px;
+    margin: 0;
+    width: 497px;
+    height: 146px;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #0D0D0D;
+    
+}
+
+.left__description {
+    margin: 0;
+    padding-left: 103px;
+    padding-top: 45px;
+    width: 340px;
+    height: 36px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color:#262626;
+}
+
+.header__right {
+    display: flex;
+    height: 855px;
+    width: 815px;
+}
+
+.right__article1 {
+    position: relative;
+    width: 470px;
+    height: 855px;
+;
+}
+
+.article1__img {
+    position: absolute;
+    width: 470px;
+    height: 855px;
+    z-index: 10;
+    
+}
+
+.article1__title {
+    position: relative;
+    z-index: 100;
+    width: 301px;
+    height: 64px;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+    padding-left: 46px;
+    padding-top: 60px;
+    padding-right: 123px;
+    margin: 0;
+    
+
+}
+
+.article1__address {
+    position: relative;
+    z-index: 100;
+    width: 313px;
+    height: 149px;
+    padding-top: 69px;
+    padding-left: 46px;
+    padding-right: 111px;
+}
+
+.address {
+    font-style: normal;
+    color: #FFFFFF;
+    
+}
+
+.address__phone {
+    font-family: 'RF Dewi';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 4px;
+    margin: 0;
+}
+
+.address__phone a {
+    color: #FFFFFF;
+}
+
+.address__description {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.des{
+    padding-bottom: 51px;
+}
+
+.article1__link {
+   position: absolute;
+   padding-top: 410px;
+   padding-left: 46px;
+   padding-right: 351px;
+}
+
+.link__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    background-color: rgba(241, 185, 157, 0.76);
+    z-index: 100;
+    border-radius: 50%;
+}
+
