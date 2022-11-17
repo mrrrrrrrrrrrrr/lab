@@ -376,45 +376,130 @@ li {
 
 
 .about__text {
-
-}
-
-.about__text::before {
-    content:counter(num);
-    counter-increment:num;
-    display: inline-block;
+    padding-left: 132px;
     position: absolute;
-    top: 0px;
-    left: -62px;
-    width: 70px;
-    height: 56px;    
-    color: #6C9DC6;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+    width: 556px;
+    height: 753px;
+    padding-left: 788px;
+    padding-top: 293px;
+    margin: 0;
+    counter-reset: item;
 }
+
+
+
+
 
 .text {
-    padding-bottom: 87px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+    letter-spacing: 0.015em;
 }
-.text__paragraph1 {
-    position: absolute;
+
+
+.about__text li:nth-child(1) {
+    position: relative;
     width: 424px;
     height: 204px;
+    padding-left: 132px;
+
     
 }
-.text__paragraph2 {
-    position: absolute;
+.about__text li:nth-child(2) {
+    position: relative;
     width: 400px;
     height: 232px;
+    top: 87px;
+    padding-left: 132px;
 }
-.text__paragraph3 {
-    position: absolute;
+.about__text li:nth-child(3) {
+    position: relative;
     width: 400px;
     height: 143px;
+    padding-left: 132px;
+    top: 174px;
 }
 
+.about__text li::before {
+        display: block;
+        position: absolute;
+        content: "." counter(item, decimal-leading-zero) " "; 
+        counter-increment: item;
+        width: 70px;
+        height: 56px;    
+        top: 0px;
+        left: -60px;
+        text-align: center;
+        font-family: 'RF Dewi';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 124%;
+        letter-spacing: -0.03em;
+        color: #6C9DC6;
+    }
 
+
+   
+.services {
+        position: relative;
+        width: 1440px;
+        height: 1150px;
+    }
+.section__title {
+        position: absolute;
+        width: 944px;
+        height: 115px;
+        font-family: 'RF Dewi';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        padding-top: 168px;
+        padding-left: 96px;
+        margin: 0;
+        color: #0D0D0D;
+    }
+.section__big-title {
+        position: absolute;
+        width: auto;
+        height: 133px;
+        font-family: 'RF Dewi';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 144px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: #F2F2F2;
+        padding-top: 405px;
+        padding-left: 678px;
+        margin: 0;
+    }
+.services__cards {
+    position: absolute;
+    display: flex;
+    
+    }
+.services-card {
+    }
+.services-card__title {
+    }
+.services-card__description {
+    }
+.services-card__background {
+    }
+.services-card__link {
+    }
+.link {
+    }
+.link__text {
+    }
+.link__img {
+    }
 
 
 
