@@ -107,7 +107,11 @@ li {
     color: #000000;
 }
 
+
+
 .menu__item:first-child {
+    width: 116px;
+    height: 30px;
     padding-left: 0px;
 }
 
@@ -248,9 +252,20 @@ li {
     position: absolute;
     width: 73px;
     height: 73px;
-    background-color: rgba(241, 185, 157, 0.76);
     z-index: 100;
     border-radius: 50%;
+}
+
+.link__img_gray {
+    background-color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.link__img:hover {
+    transition: 1s;
+    transform: scale(1.15);
+    background-color: #F1B99D;
+    opacity: 1;
 }
 
 .column-unity {
@@ -290,11 +305,6 @@ li {
     padding-top: 251px;
     padding-left: 37px;
     padding-right: 235px;
-}
-
-.link__img_bg {
-    background-color: #FFFFFF;
-    opacity: 0.5;
 }
 
 .right__article3 {
@@ -743,7 +753,7 @@ li {
  }
 
  .news {
-    position: absolute;
+    position: relative;
     width: 1440px;
     height: 1139px;
     background-color: #4C5C6B;
@@ -867,16 +877,179 @@ li {
     
 }
 .link__img_orange {
+    background-color: #F1B99D;
+}
+
+.link__img_right1 {
+    margin-left: 116px;
+}
+
+
+
+.news__button {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 73px;
-    height: 73px;
-    border-radius: 50%;
-    margin-left: 124px;
+    width: 348px;
+    height: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 114px;
+    margin-left: 550px;
 }
 
-.link__img_orange:hover {
+.news__button:hover {
     transition: 1s;
-    background-color: #F1B99D;
+    transform: scale(1.1);
+}
+
+.news__button:active {
+    transition: 1s;
+    background-color:#F1B99D ;
+}
+.button__content {
+    display: flex;
+    position: absolute;
+    width: 142px;
+    height: 24px;
+}
+
+.button__text {
+    position: relative;
+    width: 109px;
+    height: 24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.button__content svg {
+    padding-left: 20px;
+}
+
+.footer {
+    position: relative;
+    width: 1440px;
+    height: 344px;
+}
+.footer__phone {
+    position: absolute;
+    width: 318px;
+    height: 157px;
+    padding-top: 66px;
+    padding-left: 96px;
+}
+
+.phone__number {
+    width: 318px;
+    height: 30px;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 194%;
+    color: #0C0C0C;
+    margin: 0;
+}
+
+.phone__number a {
+    color: #0C0C0C;
+}
+
+.phone__time-work {
+    width: 139px;
+    height: 24px;
+    padding-top: 4px;
+    margin: 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #4C5C6B;
+    padding-bottom: 40px;
+}
+.phone__text {
+    width: 101px;
+    height: 24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #4C5C6B;
+    padding-top: 4px;
+    margin: 0;
+
+
+}
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 272px;
+    height: 122px;
+    padding-top: 66px;
+    padding-left: 580px;
+}
+
+.footer__address a {
+    color: #0C0C0C;
+}
+
+.location {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #0C0C0C;
+}
+
+.location__text {
+    margin: 0;
+}
+
+.location__mail {
+    padding-top: 24px;
+    margin: 0;
+}
+
+.footer__address a {
+    padding-top: 29px;
+}
+
+.link__img_darkgray {
+    background-color: #4C5C6B;
+}
+
+.location__link {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 326px;
+    height: 73px;
+    padding-top: 43px;
+    padding-left: 1018px;
+}
+
+.link__text_darkgray {
+    position: absolute;
+    width: 229px;
+    height: 20px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111%;
+    color: #4C5C6B;
+    padding-left: 97px;
+    margin: 0;
 }
