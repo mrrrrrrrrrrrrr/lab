@@ -38,25 +38,36 @@ li {
     list-style-type: none; 
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    max-width: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.row {
-    width: 1440px;
-    height: auto;
+.container {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.container-flex {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 89px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 110;
 }
 
 .header__navigation {
+    position: relative;
     display: flex;
-    width: 1440px;
-    height: 89px;
-    background-color: rgba(237, 237, 237, 0.72);
-    left: 0px;
-    top: 0px;
 }
 
 .logo{
@@ -71,8 +82,8 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 100%;
     color: #4C5C6B;
     padding-bottom: 7px;
 }
@@ -80,8 +91,8 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 0.875rem;
+    line-height: 100%;
     color: #AFAFAF;
 }
 
@@ -90,8 +101,8 @@ li {
 .nav__menu {
     display: flex;
     align-items: center;
-    padding-right: 96px;
-    margin: 0;
+    margin-left: auto;
+
 }
 
 .menu__item {
@@ -102,7 +113,7 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 200%;
     color: #000000;
 }
@@ -110,52 +121,50 @@ li {
 
 
 .menu__item:first-child {
-    width: 116px;
-    height: 30px;
     padding-left: 0px;
 }
 
-.row {
+.title {
     display: flex;
+    justify-content: center;
 }
 
-.header__left {
+.title__left {
     position: relative;
     height: 855px;
     width: 625px;
 }
 
 .left__title {
-    padding-left: 103px;
-    padding-top: 525px;
-    margin: 0;
     width: 497px;
     height: 146px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 2.5rem;
+    line-height: 120%;
     letter-spacing: -0.03em;
     color: #0D0D0D;
+    margin-left: 103px;
+    margin-top: 525px;
+    margin-bottom: 0;
+    margin-right: 0;
     
 }
 
 .left__description {
-    margin: 0;
-    padding-left: 103px;
-    padding-top: 45px;
     width: 340px;
     height: 36px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 129%;
     color:#262626;
+    margin: 45px 0 0 103px;
 }
 
-.header__right {
+.title__right {
     display: flex;
     height: 855px;
     width: 815px;
@@ -165,7 +174,7 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 117%;
     letter-spacing: -0.03em;
     color: #FFFFFF;
@@ -178,7 +187,6 @@ li {
     font-size: 14px;
     line-height: 129%;
     letter-spacing: -0.02em;
-
     color: #FFFFFF;
     margin: 0;
 }
@@ -186,6 +194,8 @@ li {
 .right__img {
     position: absolute;
     z-index: 10;
+    top: 0;
+    left: 0;
 }
 
 .right__article1 {
@@ -195,24 +205,19 @@ li {
 }
 
 .article1__title {
-    position: absolute;
-    z-index: 100;
+    position: relative;
     width: 301px;
     height: 64px;
-    padding-left: 46px;
-    padding-top: 60px;
-    padding-right: 123px;
-    margin: 0;
+    margin: 60px 0 0 46px;
+    z-index: 100;
 }
 
 .article1__address {
-    position: absolute;
-    z-index: 100;
+    position: relative;
     width: 313px;
     height: 149px;
-    padding-top: 193px;
-    padding-left: 46px;
-    padding-right: 111px;
+    margin: 69px 0 0 46px;
+    z-index: 100;
 }
 
 .address {
@@ -224,8 +229,8 @@ li {
 .address__phone {
     font-family: 'RF Dewi';
     font-weight: 600;
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 188%;
     padding-bottom: 4px;
     margin: 0;
 }
@@ -236,20 +241,25 @@ li {
 
 .des{
     padding-bottom: 51px;
+    margin: 0;
 }
 
+
 .article1__link {
-   position: absolute;
-   padding-top: 752px;
-   padding-left: 46px;
-   padding-right: 351px;
+   position: relative;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin: 410px 0 0 46px;
+   width: 73px;
+   height: 73px;
 }
 
 .link__img {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width: 73px;
     height: 73px;
     z-index: 100;
@@ -279,32 +289,27 @@ li {
 }
 
 .article2__title {
-    position: absolute;
-    z-index: 100;
+    position: relative;
     width: 257px;
     height: 64px;
-    padding-top: 60px;
-    padding-left: 37px;
-    padding-right: 51px;
-    margin: 0;
+    margin: 60px 0 0 37px; 
+    z-index: 100;
 }
 
 .article2__description {
-    position: absolute;
-    z-index: 100;
+    position: relative;
     width: 240px;
     height: 36px;
-    padding-left: 37px;
-    padding-right: 68px;
-    padding-top: 156px;
-    margin: 0;
+    margin: 32px 0 0 37px;
+    z-index: 100;
 }
 
 .article2__link {
-    position: absolute;
-    padding-top: 251px;
-    padding-left: 37px;
-    padding-right: 235px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 59px 0 0 37px;
 }
 
 .right__article3 {
@@ -314,85 +319,82 @@ li {
 }
 
 .article3__title {
-    position: absolute;
-    z-index: 100;
+    position: relative;
     width: 240px;
     height: 70px;
-    padding-top: 37px;
-    padding-left: 36px;
-    padding-right: 36px;
-    margin: 0;
+    margin: 37px 0 0 36px;
+    z-index: 100;
 }
 
 .article3__link {
-    position: absolute;
-    padding-top: 398px;
-    padding-left: 37px;
-    padding-right: 234px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 291px 0 0 37px;
 }
-
 
 
 .about {
     position: relative;
-    width: 1440px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: 1121px;
     background: rgba(237, 237, 237, 0.72);
 }
 
 .about__title {
-    display: inline-block;
-    position: absolute;
-    width: auto;
+    position: relative;
+    display: flex;
     height: 133px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 144px;
+    font-size: 9rem;
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #FFFBFB;
-    padding-top: 48px;
-    padding-right: 402px;
-    left: -25px;
-    margin: 0;
+    margin: 48px auto 0 0;
 }
 
 .about__img1 {
     position: absolute;
     width: 336px;
     height: 472px;
-    padding-top: 649px;
-    padding-left: 108px;
     z-index: 100;
+    margin: 649px 0 0 108px;
 }
+
 
 .about__img3 {
     position: absolute;
     width: 639px;
     height: 412px;
-    padding-top: 300px;
+    margin: 300px 0 0 0;
     z-index: 10;
 }
+
 
 .about__img2 {
     position: absolute;
     width: 425px;
     height: 324px;
-    padding-top: 545px;
-    padding-left: 263px;
     z-index: 50;
+    margin: 545px 0 0 263px;
 }
 
 
+
+
 .about__text {
-    padding-left: 132px;
-    position: absolute;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 556px;
     height: 753px;
-    padding-left: 788px;
-    padding-top: 293px;
-    margin: 0;
+    padding: 0;
+    margin: 310px 96px 0 0;
     counter-reset: item;
 }
 
@@ -404,7 +406,7 @@ li {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 167%;
     letter-spacing: 0.015em;
 }
@@ -414,64 +416,64 @@ li {
     position: relative;
     width: 424px;
     height: 204px;
-    padding-left: 132px;
-
+    margin-bottom: 87px;
+    
     
 }
 .about__text li:nth-child(2) {
     position: relative;
     width: 400px;
     height: 232px;
-    top: 87px;
-    padding-left: 132px;
+    margin-bottom: 87px;
+    
+    
 }
 .about__text li:nth-child(3) {
     position: relative;
     width: 400px;
     height: 143px;
-    padding-left: 132px;
-    top: 174px;
+    
+    
 }
 
 .about__text li::before {
+    margin-right: 620px;
     display: block;
-    position: absolute;
+    position: relative;
     content: "." counter(item, decimal-leading-zero) " "; 
     counter-increment: item;
     width: 70px;
     height: 56px;    
-    top: 0px;
-    left: -60px;
     text-align: center;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 2.8125rem;
     line-height: 124%;
     letter-spacing: -0.03em;
     color: #6C9DC6;
+   
 }
 
 
    
 .services {
-        position: relative;
-        width: 1440px;
-        height: 1150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 1150px;
 }
 .section__title {
-    position: absolute;
+    position: relative;
     width: 944px;
     height: 115px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 120%;
     letter-spacing: -0.03em;
-    padding-top: 168px;
-    padding-left: 96px;
-    margin: 0;
+    margin: 168px 0 0 96px;
     color: #0D0D0D;
 }
 
@@ -482,31 +484,28 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 144px;
+    font-size: 9rem;
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #F2F2F2;
-    padding-top: 405px;
-    padding-left: 678px;
-    margin: 0;
+    margin: 405px 0 0 400px;
 }
 
 .services__cards {
-    position: absolute;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 1248px;
-    height: 521px;
-    padding-top: 490px;
-    padding-right: 96px;
-    padding-left: 96px;
-    margin: 0;
+    margin: 490px 96px 0 96px;
 }
 
 .services-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 312px;
     height: 455px;
+    padding: 40px 33px;
+    transition: transform 0.3s ease-in-out;
 }
 
 
@@ -613,52 +612,39 @@ li {
 }
 
 
-.services-card__background:hover ~  .services-card__link {
-    
-    visibility: visible;
-}
-
-
-.services-card__background:hover ~ .services-card__description {
-    
-    visibility: visible;
-}
-
 
 
 .objects {
-    width: 1440px;
+    position: relative;
+    display: flex;
+    justify-content: center;
     height: 1246px;
 
 }
 
 .objects__big-title {
-    position: absolute;
-    width: 795px;
+    position: relative;
     height: 144px;
     font-family: 'RF Dewi';
     font-weight: 600;
-    font-size: 144px;
+    font-size: 9rem;
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #F2F2F2;
-    
     margin: 0;
 }
 .objects__address {
-    position: absolute;
+    position: relative;
+    width: 235px;
+    height: 56px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 250%;
-    display: flex;
-    align-items: center;
     letter-spacing: -0.03em;
     color: #000000;
-    padding-top: 201px;
-    padding-left: 96px;
-    margin: 0;
+    margin: 46px 0 0 96px;
 }
 
 .objects__address span {
@@ -667,7 +653,7 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 2.8125rem;
     line-height: 124%;
     letter-spacing: -0.03em;
     color: #F1B99D;
@@ -680,135 +666,141 @@ li {
     width: 575px;
     height: 385px;
     z-index: 50;
-    padding-top: 316px;
-   
-
+    margin-top: 70px;
 }
+
+
+
 .objects__img2 {
     position: absolute;
     width: 418px;
     height: 480px;
     z-index: 100;
-    padding-top: 570px;
-    padding-left: 248px;
+    margin-top: 324px;
+    margin-left: 248px;
 }
+
+.objects__text {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 807px;
+}
+
 .objects__title {
-    position: absolute;
+    position: relative;
     width: 537px;
     height: 156px;
     font-family: 'RF Dewi';
     font-weight: 600;
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 130%;
     letter-spacing: -0.03em;
     color: #000000;
-    padding-top: 316px;
-    padding-left: 807px;
 }
 
 .text1 {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 167%;
     letter-spacing: 0.015em;
     color: #202020;
 }
 .text1__paragraph1 {
-    position: absolute;
+    position: relative;
     width: 530px;
     height: 148px;
-    padding-top: 528px;
-    padding-left: 807px;
+    margin: 56px 0 0 0;
+    
 }
 .text1__paragraph2 {
-    position: absolute;
+    position: relative;
     width: 530px;
     height: 181px;
-    padding-top: 732px;
-    padding-left: 807px;
+    margin: 56px 0 0 0;
+
+    
 }
 .objects__link {
-    position: absolute;
+    position: relative;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 245px;
     height: 73px;
-    padding-top: 977px;
-    padding-left: 800px;
+    margin: 64px 0 0 0;
+    
 }
  .link__text_colorblack  {
-    position: absolute;
+    position: relative;
     width: 148px;
     height: 20px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 83%;
     color: #4C5C6B;
-    padding-left: 97px;
-    margin: 0;
+    margin-left: 24px;
  }
 
  .news {
     position: relative;
-    width: 1440px;
+    display: flex;
+    justify-content: center;
     height: 1139px;
     background-color: #4C5C6B;
 }
 .news__title {
-    position: absolute;
+    position: relative;
     width: 115px;
     height: 20px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 1.125rem;
+    line-height: 111%;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-top: 94px;
-    padding-left: 96px;
+    margin: 94px 0 0 96px;
 }
 .news__big-title {
-    position: absolute;
-    width: 2239px;
+    position: relative;
+    width: 2000px;
     height: 133px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 144px;
+    font-size: 9rem;
     line-height: 100%;
-    display: flex;
-    align-items: flex-end;
-    text-align: right;
     letter-spacing: -0.03em;
     color: #F1B99D;
-    left: -623px;
+    margin: 93px 0 0 0;
 }
+
+
 .news__cards {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    width: 1248px;
     height: 456px;
-    padding-top: 441px;
-    padding-left: 96px;
-
+    margin: 101px 0 0 96px;
 }
 .news__card {
     position: relative;
     width: 340px;
     height: 456px;
+    margin-left: 114px;
 }
 
+.news__card:nth-child(1) {
+    margin: 0;
+}
 .card__img {
-    position: absolute;
+    position: relative;
     width: 200px;
     height: 136px;
-    padding-left: 70px;
+    margin: 0 0 0 70px;
 }
 
 .card__img_up {
@@ -816,62 +808,66 @@ li {
 }
 
 .card__title {
-    position: absolute;
+    position: relative;
     width: 340px;
     height: 89px;
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 129%;
     color: #FFFFFF;
-    padding-top: 156px;
-    margin: 0;
+    margin: 20px 0 0 0;
 }
 .card__description {
-    position: absolute;
+    position: relative;
     width: 340px;
     height: 54px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 129%;
     letter-spacing: -0.02em;
     color: #FFFFFF;    
-    padding-top: 277px;
-    margin: 0;
+    margin: 32px 0 0 0;
 }
+
+.uniter {
+    display: flex;
+}
+
 .card__date {
-    position: absolute;
+    position: relative;
     width: 97px;
     height: 18px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 150%;
     color: #FFFFFF;
-    padding-top: 411px;
-    margin: 0;
+    margin: 80px 0 0 0;
 }
 .card__link {
-    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 197px;
     height: 73px;
-    display: flex;
-    align-items: center;
-    padding-top: 383px;
-    padding-left: 143px;
+    margin-top: 52px;
+    margin-left: 46px;
+    margin-right: 0;
 }
 .link__text_colororange {
-    position: absolute;
+    position: relative;
     width: 100px;
     height: 20px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 111%;
     color: #F1B99D;
     
@@ -881,13 +877,13 @@ li {
 }
 
 .link__img_right1 {
-    margin-left: 116px;
+    margin-left: 24px;
 }
 
 
 
 .news__button {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -897,7 +893,7 @@ li {
     border-radius: 50px;
     background-color: transparent;
     cursor: pointer;
-    margin-top: 114px;
+    margin-top: 99px;
     margin-left: 550px;
 }
 
@@ -912,7 +908,7 @@ li {
 }
 .button__content {
     display: flex;
-    position: absolute;
+    position: relative;
     width: 142px;
     height: 24px;
 }
@@ -924,7 +920,7 @@ li {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 133%;
     color: #FFFFFF;
     margin: 0;
@@ -936,15 +932,16 @@ li {
 
 .footer {
     position: relative;
-    width: 1440px;
+    display: flex;
+    justify-content: center;
     height: 344px;
 }
 .footer__phone {
-    position: absolute;
+    position: relative;
     width: 318px;
     height: 157px;
-    padding-top: 66px;
-    padding-left: 96px;
+    margin-top: 66px;
+    margin-left: 96px;
 }
 
 .phone__number {
@@ -953,7 +950,7 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 194%;
     color: #0C0C0C;
     margin: 0;
@@ -971,10 +968,10 @@ li {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 171%;
     color: #4C5C6B;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 .phone__text {
     width: 101px;
@@ -982,7 +979,7 @@ li {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 171%;
     color: #4C5C6B;
     padding-top: 4px;
@@ -993,11 +990,11 @@ li {
 .footer__address {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     width: 272px;
     height: 122px;
-    padding-top: 66px;
-    padding-left: 580px;
+    margin-top: 66px;
+    margin-left: 194px;
 }
 
 .footer__address a {
@@ -1008,7 +1005,7 @@ li {
     font-family: 'RF Dewi';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 175%;
     color: #0C0C0C;
 }
@@ -1031,25 +1028,25 @@ li {
 }
 
 .location__link {
-    position: absolute;
+    position: relative;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 326px;
     height: 73px;
-    padding-top: 43px;
-    padding-left: 1018px;
+    margin-top: 43px;
+    margin-left: 166px;
 }
 
 .link__text_darkgray {
-    position: absolute;
+    position: relative;
     width: 229px;
     height: 20px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 111%;
     color: #4C5C6B;
-    padding-left: 97px;
-    margin: 0;
+    margin:0 0 0 24px;
 }
