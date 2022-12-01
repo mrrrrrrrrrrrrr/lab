@@ -340,7 +340,6 @@ li {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 1121px;
     background: rgba(237, 237, 237, 0.72);
 }
 
@@ -363,7 +362,7 @@ li {
     width: 336px;
     height: 472px;
     z-index: 100;
-    margin: 649px 0 0 108px;
+    margin: 468px 0 0 108px;
 }
 
 
@@ -371,7 +370,7 @@ li {
     position: absolute;
     width: 639px;
     height: 412px;
-    margin: 300px 0 0 0;
+    margin: 119px 0 0 0;
     z-index: 10;
 }
 
@@ -381,7 +380,7 @@ li {
     width: 425px;
     height: 324px;
     z-index: 50;
-    margin: 545px 0 0 263px;
+    margin: 364px 0 0 263px;
 }
 
 
@@ -391,11 +390,11 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 556px;
-    height: 753px;
+    width: 532px;
     padding: 0;
-    margin: 310px 96px 0 0;
+    margin: 112px 0 0 788px;
     counter-reset: item;
+
 }
 
 
@@ -412,34 +411,27 @@ li {
 }
 
 
-.about__text li:nth-child(1) {
+
+.text__paragraph {
     position: relative;
-    width: 424px;
-    height: 204px;
     margin-bottom: 87px;
+    padding-left: 132px;
     
     
 }
-.about__text li:nth-child(2) {
+
+.text__paragraph:last-child {
     position: relative;
-    width: 400px;
-    height: 232px;
-    margin-bottom: 87px;
-    
-    
-}
-.about__text li:nth-child(3) {
-    position: relative;
-    width: 400px;
-    height: 143px;
-    
+    padding-left: 132px;
+    padding-bottom: 85px;
+    margin-bottom: 0;
     
 }
 
 .about__text li::before {
     margin-right: 620px;
     display: block;
-    position: relative;
+    position: absolute;
     content: "." counter(item, decimal-leading-zero) " "; 
     counter-increment: item;
     width: 70px;
@@ -452,7 +444,12 @@ li {
     line-height: 124%;
     letter-spacing: -0.03em;
     color: #6C9DC6;
-   
+    left: 0;
+    top: 0;
+}
+
+.about__text li::after {
+    margin-left: 100px;
 }
 
 
@@ -461,7 +458,7 @@ li {
     position: relative;
     display: flex;
     justify-content: center;
-    height: 1150px;
+    
 }
 .section__title {
     position: relative;
@@ -488,14 +485,14 @@ li {
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #F2F2F2;
-    margin: 405px 0 0 400px;
+    margin: 122px 0 0 400px;
 }
 
 .services__cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 490px 96px 0 96px;
+    margin: 207px 96px 0 96px;
 }
 
 .services-card {
@@ -510,12 +507,11 @@ li {
 
 
 .services-card__title {
-    position: absolute;
+    position: relative;
     width: 252px;
-    height: 93px;
     font-family: 'RF Dewi';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 129%;
     color: #FFFFFF;
     padding-top: 47px;
@@ -525,26 +521,23 @@ li {
     z-index: 100;
 }
 .services-card__description {
-    position: absolute;
+    position: relative;
     width: 226px;
     height: 53px;
     font-family: 'Raleway';
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 129%;
     letter-spacing: -0.02em;
     color: #FFFFFF;
-    padding-top: 133px;
-    padding-left: 33px;
-    padding-right: 53px;
-    margin: 0;
+    margin-top: 24px;
+    margin-left: 33px;
+    margin-bottom: 0;
     z-index: 100;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.services-card__description_lp {
-    padding-top: 164px;
-}
 .services-card__background {
     display: inline-block;
     position: absolute;
@@ -572,43 +565,61 @@ li {
 
 
 .services-card__link {
-    position: absolute;
+    position: relative;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 246px;
     height: 73px;
-    padding-top: 408px;
-    padding-right: 33px;
-    padding-left: 33px;
+    margin-top: 160px;
+    margin-left: 33px;
     z-index: 10;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.services-card__link-marginDown {
+    margin-top: 129px;
 }
 
 .link__text {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: relative;
     width: 157px;
     height: 20px;
     font-family: 'Raleway';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 111%;
     color: #FFFFFF;
 }
 
 .link__img_right {
-   margin-left: 173px;
+   margin-left: 16px;
 }
 
 
 
-.services-card__background:hover {
+.services-card:hover {
+    transition: 1s;
+    transform: scale(1, 1.2);
+}
+
+.services-card:hover .services-card__background {
     
     transition: 1s;
-    transform: scale(1, 1.145);
     filter: grayscale(0);
     -webkit-filter: brightness(70%);
     
+}
+
+.services-card:hover .services-card__description {
+    opacity: 1;
+}
+
+.services-card:hover .services-card__link {
+    opacity: 1;
 }
 
 
@@ -618,12 +629,11 @@ li {
     position: relative;
     display: flex;
     justify-content: center;
-    height: 1246px;
-
+    margin-top: 186px;
 }
 
 .objects__big-title {
-    position: relative;
+    position: absolute;
     height: 144px;
     font-family: 'RF Dewi';
     font-weight: 600;
@@ -631,7 +641,7 @@ li {
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #F2F2F2;
-    margin: 0;
+    margin: 0 0 0 -100px;
 }
 .objects__address {
     position: relative;
@@ -644,7 +654,7 @@ li {
     line-height: 250%;
     letter-spacing: -0.03em;
     color: #000000;
-    margin: 46px 0 0 96px;
+    margin: 201px 0 0 96px;
 }
 
 .objects__address span {
@@ -749,8 +759,9 @@ li {
     position: relative;
     display: flex;
     justify-content: center;
-    height: 1139px;
+    
     background-color: #4C5C6B;
+    margin-top: 196px;
 }
 .news__title {
     position: relative;
@@ -766,8 +777,8 @@ li {
     margin: 94px 0 0 96px;
 }
 .news__big-title {
-    position: relative;
-    width: 2000px;
+    position: absolute;
+    width: 3000px;
     height: 133px;
     font-family: 'RF Dewi';
     font-style: normal;
@@ -776,7 +787,7 @@ li {
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #F1B99D;
-    margin: 93px 0 0 0;
+    margin: 93px 0 0 -470px;
 }
 
 
@@ -784,7 +795,7 @@ li {
     position: relative;
     display: flex;
     height: 456px;
-    margin: 101px 0 0 96px;
+    margin: 327px 0 0 96px;
 }
 .news__card {
     position: relative;
@@ -794,7 +805,7 @@ li {
 }
 
 .news__card:nth-child(1) {
-    margin: 0;
+    margin-left: 0;
 }
 .card__img {
     position: relative;
@@ -831,6 +842,7 @@ li {
     letter-spacing: -0.02em;
     color: #FFFFFF;    
     margin: 32px 0 0 0;
+    
 }
 
 .uniter {
@@ -895,6 +907,7 @@ li {
     cursor: pointer;
     margin-top: 99px;
     margin-left: 550px;
+    margin-bottom: 83px;
 }
 
 .news__button:hover {
