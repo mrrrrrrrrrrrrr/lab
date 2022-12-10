@@ -1137,8 +1137,78 @@ li {
    }
 
    .services__cards {
+    float: left;
     overflow: auto;
    }
+
+
+   
+   .objects__img1 {
+    width: auto;
+    height: auto;
+    margin-right: 50px;
+    margin-left: 720px;
+   }
+
+   .objects__img2 {
+    width: auto;
+    height: auto;
+    margin-right: 50px;
+    margin-left: 780px;
+   
+   
+   }
+
+   .objects__text {
+    width: auto;
+    height: auto;
+    margin-left: 100px;
+   }
+}
+
+@media (max-width: 1180px) {
+    .objects__img1 {
+        margin-left: 680px;
+    }
+
+    .objects__img2 {
+        margin-left: 730px;
+    }
+}
+
+@media (max-width: 1135px) {
+    .objects__img1 {
+        opacity: 0;
+    }
+
+    .objects__img2 {
+        opacity: 0;
+    }
+
+    .objects__big-title {
+        position: relative;
+        width: 773px;
+        margin: 0 auto 0 auto;
+    }
+
+    .objects__address {
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .objects__text {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right:auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .objects__big-title {
+        width: 681px;
+        font-size: 8rem;
+    }
 }
 
 @media (max-width: 1080px) {
