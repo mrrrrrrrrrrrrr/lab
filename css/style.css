@@ -945,6 +945,7 @@ li {
     position: relative;
     width: 142px;
     height: 24px;
+    align-items: center;
 }
 
 .button__text {
@@ -961,7 +962,7 @@ li {
 }
 
 .button__content svg {
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .footer {
@@ -1373,6 +1374,30 @@ li {
         font-size: 5.5rem;
         width: 640px;
     }
+
+    .section__title {
+        font-size: 2rem;
+        width: 645px;
+    }
+
+    .objects__big-title {
+        font-size: 7.5rem;
+        width: 638px;
+    }
+
+    .container-flex2 {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .footer__address {
+        margin-top: 0;
+    }
+
+    .location__link {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 680px) {
@@ -1409,6 +1434,13 @@ li {
         margin-left: 10px;
     }
 
+    .section__title {
+        width: 421px;
+    }
+    
+    .objects__address {
+        margin-top: 60px;
+    }
 }
 
 @media (max-width:660px) {
@@ -1416,7 +1448,18 @@ li {
         font-size: 5rem;
         width: 582px;
     }
+
+    .about__text {
+        margin-top: 60px;
+    }
+
+    .objects__big-title {
+        font-size: 7rem;
+        width: 596px;
+    }
 }
+
+
 
 @media (max-width: 640px) {
     .title__left {
@@ -1459,15 +1502,49 @@ li {
         margin-top: 121px;
         padding-bottom: 30px;
     }
+
+    .objects__big-title {
+        font-size: 6.5rem;
+        width: 556px;
+    }
 }
 
 @media (max-width:600px) {
     .address__phone a {
         font-size: 0.75rem;
     }
+
+    .about__title {
+        font-size: 4.5rem;
+        width: 524px;
+        
+    }
 }
 
+@media (max-width:590px) {
+    .section__big-title {
+        font-size: 8.25rem;
+    }
 
+    .objects__big-title {
+        font-size: 6rem;
+        width: 510px;
+    }
+
+    .objects__address {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width:560px) {
+    .about__text {
+        margin-top: 45px;
+    }
+
+    .text1__paragraph1 {
+        width: 510px;
+    }
+}
 
 @media (min-width: 1440px) {
     .logo {
